@@ -1,0 +1,26 @@
+{
+  "name": "chat-webrtc",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "vite",
+    "dev:debug": "concurrently -k \"npm run server:debug\" \"vite\" ",
+    "dev": "concurrently -k \"npm run server\" \"vite\" ",
+    "build": "vite build",
+    "server": "node server/Server.js",
+    "server:debug": "DEBUG=socket* nodemon server/Server.js"
+  },
+  "devDependencies": {
+    "vite": "^4.4.5",
+    "concurrently": "^7.5.0",
+    "nodemon": "^2.0.20",
+    "sass": "^1.56.0"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "request": "^2.88.2",
+    "socket.io": "^4.5.3",
+    "socket.io-client": "^4.5.3"
+  }
+}
